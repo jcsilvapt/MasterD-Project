@@ -5,41 +5,41 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour {
 
-    public Vector2 normalInput;
-    public Vector2 newInput;
-    private Animator anim;
-    public float dumpTemp = 0.25f;
-    public float speed = 1f;
+    [Header("Input Settings")]
+    [Range(1f, 10f)]
+    public float inputSensitivity = 3f;
 
+    // Private
+    private Vector2 newInput;   // Stores the current value from input
+    private Animator anim;      // Stores the animator of the Character
 
+    private Vector2 deltaInput; // Fixes the Current value from the input
 
     private void Start() {
         anim = GetComponent<Animator>();
     }
 
     private void Update() {
-        normalInput.x = Input.GetAxis("Horizontal");
-        normalInput.y = Input.GetAxis("Vertical");
+        anim.SetFloat("horizontal", deltaInput.x);
+        anim.SetFloat("vertical", deltaInput.y);
+    }
+
+    private void FixedUpdate() {
+        PrepareControlsInput();
     }
 
     public void OnMove(InputValue t) {
 
-        var value = t.Get<Vector2>();
-        float vX = 0f; ;
-        float vY = 0f;
-        if (value.x > 0) { vX += 1f; }
-        else if(value.x < 0) { vX -=1f; }
+        newInput = t.Get<Vector2>();
 
-        vX = Mathf.Clamp(vX, -1, 1);
+    }
 
-        if(value.y > 0) { vY += 1f; }
-        else if(value.y < 0) { vY -= 1f; }
+    private void PrepareControlsInput() {
 
-        newInput.x = vX;
-        newInput.y = vY;
+        deltaInput.x = Mathf.MoveTowards(deltaInput.x, newInput.x, Time.deltaTime * inputSensitivity);
+        deltaInput.y = Mathf.MoveTowards(deltaInput.y, newInput.y, Time.deltaTime * inputSensitivity);
 
-        anim.SetFloat("horizontal", vX);
-        anim.SetFloat("vertical", vY);
+        deltaInput = Vector2.ClampMagnitude(deltaInput, 1f);
 
     }
 
