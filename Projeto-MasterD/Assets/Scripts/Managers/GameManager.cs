@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -13,6 +14,10 @@ public class GameManager : MonoBehaviour {
 
     [SerializeField] GameObject loadCanvas;
     [SerializeField] Slider loadSlider;
+
+    [Header("Sound Manager")]
+
+    [SerializeField] AudioMixer audioMixer;
 
     [Header("Developer Settings")]
 
@@ -47,6 +52,9 @@ public class GameManager : MonoBehaviour {
 
     private void InitialSettings() {
         loadCanvas.SetActive(false);
+        if(audioMixer == null) {
+            audioMixer = GetComponent<AudioMixer>();
+        }
     }
 
 
@@ -160,6 +168,43 @@ public class GameManager : MonoBehaviour {
     private void CloseGame() {
         //TODO: Possivelmente adicionar o sistema de Guardar Dados ao Fechar o Jogo...
         Application.Quit();
+    }
+
+    #endregion
+
+
+    #region AUDIO SETTINGS
+
+    /// <summary>
+    /// Function that controls the Master Volume of the Game
+    /// </summary>
+    /// <param name="volume"></param>
+    public void SetMasterVolume(Slider volume) {
+        audioMixer.SetFloat("master", volume.value);
+    }
+
+    /// <summary>
+    /// Function that controls the Music volume
+    /// </summary>
+    /// <param name="volume"></param>
+    public void SetMusicVolume(Slider volume) {
+        audioMixer.SetFloat("music", volume.value);
+    }
+
+    /// <summary>
+    /// Function that controls the Ambient sound volume
+    /// </summary>
+    /// <param name="volume"></param>
+    public void SetAmbientVolume(Slider volume) {
+        audioMixer.SetFloat("ambient", volume.value);
+    }
+
+    /// <summary>
+    /// Function that controls the SFX sound volume
+    /// </summary>
+    /// <param name="volume"></param>
+    public void SetSFXVolume(Slider volume) {
+        audioMixer.SetFloat("sfx", volume.value);
     }
 
     #endregion
