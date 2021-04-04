@@ -19,11 +19,15 @@ public class Player : MonoBehaviour {
     [SerializeField] Vector3 nextPosition;
     [SerializeField] Quaternion nextRotation;
 
+    [SerializeField] PeekSystemController peaking;
+
     private bool freeLook = false;
 
     // Private
     private Vector2 move, look;   // Stores the current value from input
     private Animator anim;      // Stores the animator of the Character
+    private bool canMove = true;
+    public bool ableToPeak = false;
 
     private Vector2 deltaInput; // Fixes the Current value from the input
 
@@ -38,12 +42,12 @@ public class Player : MonoBehaviour {
     }
 
     public void OnInteraction() {
-        Debug.Log("OH YEAH");
+        ableToPeak = !ableToPeak;
     }
 
     public void OnLook(InputValue value) {
         look = value.Get<Vector2>();
-    } 
+    }
 
     public void OnFreeLook() {
         freeLook = !freeLook;
@@ -63,52 +67,73 @@ public class Player : MonoBehaviour {
     }
 
     private void Update() {
+        // Checks if the player can move
+        if (canMove) {
 
-        #region Follow Transform Rotation
+            #region Follow Transform Rotation
 
-        followTransform.transform.rotation *= Quaternion.AngleAxis(look.x * rotationPower, Vector3.up);
+            followTransform.transform.rotation *= Quaternion.AngleAxis(look.x * rotationPower, Vector3.up);
 
-        #endregion
+            #endregion
 
-        #region Follow Transform Vertical Rotation
+            #region Follow Transform Vertical Rotation
 
-        followTransform.transform.rotation *= Quaternion.AngleAxis(-look.y * rotationPower, Vector3.right);
+            followTransform.transform.rotation *= Quaternion.AngleAxis(-look.y * rotationPower, Vector3.right);
 
-        var angles = followTransform.transform.localEulerAngles;
-        angles.z = 0;
+            var angles = followTransform.transform.localEulerAngles;
+            angles.z = 0;
 
-        var angle = followTransform.transform.localEulerAngles.x;
+            var angle = followTransform.transform.localEulerAngles.x;
 
-        if(angle > 180 && angle < 340) {
-            angles.x = 340;
+            if (angle > 180 && angle < 340) {
+                angles.x = 340;
+            } else if (angle < 180 && angle > 40) {
+                angles.x = 40;
+            }
+
+            followTransform.transform.localEulerAngles = angles;
+
+            #endregion
+
+            #region Transform Rotation
+
+            nextRotation = Quaternion.Lerp(followTransform.transform.rotation, nextRotation, Time.deltaTime * rotationPower);
+
+            if (freeLook) {
+                nextPosition = transform.position;
+                anim.SetFloat("horizontal", 0);
+                anim.SetFloat("vertical", 0);
+                return;
+            }
+
+            transform.rotation = Quaternion.Euler(0, followTransform.transform.rotation.eulerAngles.y, 0);
+
+            followTransform.transform.localEulerAngles = new Vector3(angles.x, 0, 0);
+
+            #endregion
+
+            #region Animator Control
+
+            anim.SetFloat("horizontal", deltaInput.x);
+            anim.SetFloat("vertical", deltaInput.y);
+
+            #endregion
+
+        } else {
+            anim.SetFloat("horizontal", 0);
+            anim.SetFloat("vertical", 0);
         }
-        else if(angle < 180 && angle > 40) {
-            angles.x = 40;
-        }
-
-        followTransform.transform.localEulerAngles = angles;
-
-        #endregion
-
-        nextRotation = Quaternion.Lerp(followTransform.transform.rotation, nextRotation, Time.deltaTime * rotationPower);
-
-        if(freeLook) {
-            nextPosition = transform.position;
-            return;
-        }
-
-        transform.rotation = Quaternion.Euler(0, followTransform.transform.rotation.eulerAngles.y, 0);
-
-        followTransform.transform.localEulerAngles = new Vector3(angles.x, 0, 0);
-
-        anim.SetFloat("horizontal", deltaInput.x);
-        anim.SetFloat("vertical", deltaInput.y);
     }
 
     private void FixedUpdate() {
         PrepareControlsInput();
     }
 
+    public void SetCanMove(bool canMove) {
+        this.canMove = canMove;
+    }
 
-
+    public void SetActivePeak(PeekSystemController peak) {
+        this.peaking = peak;
+    }
 }

@@ -35,7 +35,7 @@
                     "id": "52b811d4-1f49-4788-b423-1738eb00ac37",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=2)"
                 },
                 {
                     "name": "FreeLook",

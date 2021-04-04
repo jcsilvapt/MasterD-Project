@@ -19,7 +19,9 @@ public class PeekSystemController : MonoBehaviour
 
     public bool canTransition;
 
-    private PlayerController playerController;
+    private Player playerController;
+
+    public bool allowPeak = false;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +38,7 @@ public class PeekSystemController : MonoBehaviour
 
     private void Update()
     {
-        if (canTransition == true && !brain.IsBlending && Input.GetKeyDown(KeyCode.E))
+        if (canTransition == true && !brain.IsBlending && playerController.ableToPeak)
         {
             if ((CinemachineVirtualCamera)brain.ActiveVirtualCamera == cameraPlayer)
             {
@@ -45,7 +47,7 @@ public class PeekSystemController : MonoBehaviour
                 cameraPlayer.Priority = lowerPriority;
 
                 playerController.SetCanMove(false);
-                playerController.StopPlayer();
+               
             }
             else if ((CinemachineVirtualCamera)brain.ActiveVirtualCamera == cameraToBeActive)
             {
@@ -72,7 +74,7 @@ public class PeekSystemController : MonoBehaviour
         if(other.tag == "Player")
         {
             canTransition = true;
-            playerController = other.GetComponent<PlayerController>();
+            playerController = other.GetComponent<Player>();
 
             ActivateUI(true);
         }
