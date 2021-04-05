@@ -19,8 +19,6 @@ public class Player : MonoBehaviour {
     [SerializeField] Vector3 nextPosition;
     [SerializeField] Quaternion nextRotation;
 
-    [SerializeField] PeekSystemController peaking;
-
     private bool freeLook = false;
 
     // Private
@@ -133,7 +131,4 @@ public class Player : MonoBehaviour {
         this.canMove = canMove;
     }
 
-    public void SetActivePeak(PeekSystemController peak) {
-        this.peaking = peak;
-    }
 }
