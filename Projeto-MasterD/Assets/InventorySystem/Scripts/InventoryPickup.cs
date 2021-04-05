@@ -8,6 +8,9 @@ public class InventoryPickup : MonoBehaviour
     //Inventory Reference
     private InventorySystem inventory;
 
+    //Item Reference
+    public GameObject itemObject;
+
     //UI Reference
     public GameObject UIItem;
 
@@ -23,6 +26,9 @@ public class InventoryPickup : MonoBehaviour
     private void Start()
     {
         canPickUp = false;
+
+        //Set Item Reference
+        itemObject = transform.GetChild(1).gameObject;
 
         //Set Message Reference
         UIItemMessage = UIItem.transform.GetChild(0).GetComponent<Text>();
@@ -42,7 +48,7 @@ public class InventoryPickup : MonoBehaviour
         }
         else if(canPickUp && Input.GetKeyDown(KeyCode.E))
         {
-            if(!inventory.PickUpItem(gameObject, this))
+            if(!inventory.PickUpItem(itemObject, this))
             {
                 StartCoroutine(InventoryFull());
             }
