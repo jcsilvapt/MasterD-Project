@@ -25,7 +25,7 @@ Material:
   m_ShaderKeywords: _ALPHAPREMULTIPLY_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 1
+  m_DoubleSidedGI: 0
   m_CustomRenderQueue: 3050
   stringTagMap:
     RenderType: Transparent
@@ -82,7 +82,7 @@ Material:
     - _AlphaClip: 0
     - _Blend: 1
     - _BumpScale: 1
-    - _Cull: 0
+    - _Cull: 2
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 10
@@ -90,13 +90,13 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.675
     - _GlossyReflections: 1
-    - _Metallic: 0.09
+    - _Metallic: 0.084
     - _Mode: 3
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Smoothness: 0.945
+    - _Smoothness: 0.771
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
