@@ -2,7 +2,34 @@ fileFormatVersion: 2
 guid: bc8ef22248ec31e44a1e3113fb4f47fa
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -6717937588273548539
+    second: Gates.002|Door.006Action
+  - first:
+      74: 2619284689589033699
+    second: Gates.002|Door.008Action
+  - first:
+      74: 5091566230862627403
+    second: Gates.002|Gates.002Action
+  - first:
+      74: 1337341977852036583
+    second: Door.008|Door.006Action
+  - first:
+      74: -4917549968726640943
+    second: Door.008|Door.008Action
+  - first:
+      74: -2923620715661882048
+    second: Door.008|Gates.002Action
+  - first:
+      74: 6060504193585697087
+    second: Door.006|Door.006Action
+  - first:
+      74: 1549537299584159294
+    second: Door.006|Door.008Action
+  - first:
+      74: -8264990918693368789
+    second: Door.006|Gates.002Action
   externalObjects:
   - first:
       type: UnityEngine:Material
