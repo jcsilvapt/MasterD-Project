@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(PlayerInput))]
-public class Player : MonoBehaviour {
+public class Player : MonoBehaviour
+{
 
     [Header("Input Settings")]
     [Range(1f, 10f)]
@@ -21,6 +22,10 @@ public class Player : MonoBehaviour {
 
     private bool freeLook = false;
 
+    //change animations
+    public bool flashLight = false;
+    public GameObject lighter; // lanterna para testes
+
     // Private
     private Vector2 move, look;   // Stores the current value from input
     private Animator anim;      // Stores the animator of the Character
@@ -29,25 +34,31 @@ public class Player : MonoBehaviour {
 
     private Vector2 deltaInput; // Fixes the Current value from the input
 
-    private void Start() {
+    private void Start()
+    {
         anim = GetComponent<Animator>();
+        lighter.SetActive(false);
     }
 
     #region INPUTS
 
-    public void OnMove(InputValue t) {
+    public void OnMove(InputValue t)
+    {
         move = t.Get<Vector2>();
     }
 
-    public void OnInteraction() {
+    public void OnInteraction()
+    {
         ableToPeak = !ableToPeak;
     }
 
-    public void OnLook(InputValue value) {
+    public void OnLook(InputValue value)
+    {
         look = value.Get<Vector2>();
     }
 
-    public void OnFreeLook() {
+    public void OnFreeLook()
+    {
         freeLook = !freeLook;
     }
 
@@ -55,7 +66,8 @@ public class Player : MonoBehaviour {
 
 
 
-    private void PrepareControlsInput() {
+    private void PrepareControlsInput()
+    {
 
         deltaInput.x = Mathf.MoveTowards(deltaInput.x, move.x, Time.deltaTime * inputSensitivity);
         deltaInput.y = Mathf.MoveTowards(deltaInput.y, move.y, Time.deltaTime * inputSensitivity);
@@ -64,9 +76,11 @@ public class Player : MonoBehaviour {
 
     }
 
-    private void Update() {
+    private void Update()
+    {
         // Checks if the player can move
-        if (canMove) {
+        if (canMove)
+        {
 
             #region Follow Transform Rotation
 
@@ -83,9 +97,12 @@ public class Player : MonoBehaviour {
 
             var angle = followTransform.transform.localEulerAngles.x;
 
-            if (angle > 180 && angle < 340) {
+            if (angle > 180 && angle < 340)
+            {
                 angles.x = 340;
-            } else if (angle < 180 && angle > 40) {
+            }
+            else if (angle < 180 && angle > 40)
+            {
                 angles.x = 40;
             }
 
@@ -97,7 +114,8 @@ public class Player : MonoBehaviour {
 
             nextRotation = Quaternion.Lerp(followTransform.transform.rotation, nextRotation, Time.deltaTime * rotationPower);
 
-            if (freeLook) {
+            if (freeLook)
+            {
                 nextPosition = transform.position;
                 anim.SetFloat("horizontal", 0);
                 anim.SetFloat("vertical", 0);
@@ -117,17 +135,39 @@ public class Player : MonoBehaviour {
 
             #endregion
 
-        } else {
+        }
+        else
+        {
             anim.SetFloat("horizontal", 0);
             anim.SetFloat("vertical", 0);
         }
+
+        #region Animations Change
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (flashLight == false)
+            {
+                anim.gameObject.GetComponent<Animator>().SetBool("FlashLight", true);
+                flashLight = true;
+                lighter.SetActive(true);
+            }
+            else
+            {
+                anim.gameObject.GetComponent<Animator>().SetBool("FlashLight", false);
+                flashLight = false;
+                lighter.SetActive(false);
+            }
+        }
+        #endregion
     }
 
-    private void FixedUpdate() {
+    private void FixedUpdate()
+    {
         PrepareControlsInput();
     }
 
-    public void SetCanMove(bool canMove) {
+    public void SetCanMove(bool canMove)
+    {
         this.canMove = canMove;
     }
 

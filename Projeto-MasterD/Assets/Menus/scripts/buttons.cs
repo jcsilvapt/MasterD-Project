@@ -60,6 +60,6 @@ public class buttons : MonoBehaviour
     }
     public void NewGame()
     {
-        //adicionar o numero da cena quando tiver organizado
+        GameManager.ChangeScene(1, true);
     }
 }
