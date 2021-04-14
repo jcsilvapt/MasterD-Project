@@ -1,0 +1,304 @@
+fileFormatVersion: 2
+guid: 4147bbd6adcf3994a9583d88608f22f5
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      74: 6060504193585697087
+    second: Door.006|Door.006Action
+  - first:
+      74: 1549537299584159294
+    second: Door.006|Door.008Action
+  - first:
+      74: -8264990918693368789
+    second: Door.006|Gates.002Action
+  - first:
+      74: 1337341977852036583
+    second: Door.008|Door.006Action
+  - first:
+      74: -4917549968726640943
+    second: Door.008|Door.008Action
+  - first:
+      74: -2923620715661882048
+    second: Door.008|Gates.002Action
+  - first:
+      74: -6717937588273548539
+    second: Gates.002|Door.006Action
+  - first:
+      74: 2619284689589033699
+    second: Gates.002|Door.008Action
+  - first:
+      74: 5091566230862627403
+    second: Gates.002|Gates.002Action
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BathtubCurtains
+    second: {fileID: 2100000, guid: 73004c6794a1d98489de64cd3926873e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: a2ad5212de6738b4fac8b652ba9e42d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Curtains_Fabric030
+    second: {fileID: 2100000, guid: 7df836ead83f61c41830dd9bef5b2c10, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fabric001
+    second: {fileID: 2100000, guid: 1865454135be5f9448525644241293a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GarbageCan_Fabric030
+    second: {fileID: 2100000, guid: fe013473e8ec0244a97d127e70207bbc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: aa03f016b901fe644b01c12e22f546c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HallwayCeiling_Plaster003
+    second: {fileID: 2100000, guid: 66954bab50db0be48846c3f78f27d434, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HallwayWalls_Plaster003
+    second: {fileID: 2100000, guid: 8c3e2a9855f70af4a8c32e52d7e09419, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hallway_Floor_Leather027
+    second: {fileID: 2100000, guid: a51a562f4426cba489f0269fb357d77b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hallway_floor
+    second: {fileID: 2100000, guid: 3e440d0e999a72a4a88ae88ad3998772, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lamps_Metal010
+    second: {fileID: 2100000, guid: 88428e6b959fd714d9d82991ee165bee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leather026
+    second: {fileID: 2100000, guid: f7816024bd3b8e24b952a3e0f8245459, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leather027
+    second: {fileID: 2100000, guid: 386fcd7c6122ecf488d26ce33defdaff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Marble015
+    second: {fileID: 2100000, guid: 7b861eac1fbcde942824034c109468ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal003
+    second: {fileID: 2100000, guid: 3edd3d99c763d5d4593e0e6d964782e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal010
+    second: {fileID: 2100000, guid: cddbe296cbb05964ab21df5860396945, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal012
+    second: {fileID: 2100000, guid: 0a25c96ff174f524ebac37356596944c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal027
+    second: {fileID: 2100000, guid: ca9471ce47ddbc34bb1fd49504308615, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal032
+    second: {fileID: 2100000, guid: 326aef99d276da248948ec1d7977116c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal035
+    second: {fileID: 2100000, guid: 3209bde2382b9ab40a2a640320bc2247, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mirror
+    second: {fileID: 2100000, guid: ef161868ea9d5f046bb6bb0fe856d232, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Paper001
+    second: {fileID: 2100000, guid: 3f764d1195ae2ce42a5e44502e9f87dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plaster003_BathRoom
+    second: {fileID: 2100000, guid: 0e05f17464f4d584da61ab42218eb752, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic006
+    second: {fileID: 2100000, guid: 159d013326d6e3d40a6c6748e197501b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic010
+    second: {fileID: 2100000, guid: 3938a450b19a38343b8581e7f0b7f953, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlasticLamp
+    second: {fileID: 2100000, guid: 685d6220ef0496d4ab270240a84bee14, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RoomsCeiling_Plaster003
+    second: {fileID: 2100000, guid: da1eff87329dba7468936258417357e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RoomsFloor_Leather025
+    second: {fileID: 2100000, guid: 0ebd08e9e0771cb41955375c6f85686f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RoomsWall_Plaster003
+    second: {fileID: 2100000, guid: 7735425e4452d6543b5806780ef3cb55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Screen
+    second: {fileID: 2100000, guid: 591ba342398ef8947985b4e78963456f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tiles028Bathroom
+    second: {fileID: 2100000, guid: 2dfe35d14699137459c9fc7142c3b913, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tiles030_HoleInWall
+    second: {fileID: 2100000, guid: 9bb0bffb6690b424b8a52ed12621c861, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tiles036
+    second: {fileID: 2100000, guid: 7cb529e718996fa4f8b98758adcea803, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tiles039
+    second: {fileID: 2100000, guid: 92dae1f5ea0f52b4d99337e8cc122301, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood037
+    second: {fileID: 2100000, guid: f81aeb4722d7fe142ae9be0b853a40f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood039
+    second: {fileID: 2100000, guid: 266e98c4fe5e754438cd568a552d46d9, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
