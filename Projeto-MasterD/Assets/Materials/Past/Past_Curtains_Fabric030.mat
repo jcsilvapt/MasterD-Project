@@ -22,10 +22,10 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Past_Curtains_Fabric030
   m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
-  m_ShaderKeywords: _NORMALMAP _NORMALMAP_TANGENT_SPACE
+  m_ShaderKeywords: _DOUBLESIDED_ON _ENABLE_GEOMETRIC_SPECULAR_AA _NORMALMAP _NORMALMAP_TANGENT_SPACE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
+  m_DoubleSidedGI: 1
   m_CustomRenderQueue: 2000
   stringTagMap: {}
   disabledShaderPasses:
@@ -181,8 +181,8 @@ Material:
     - _BumpScale: 1
     - _CoatMask: 0
     - _Cull: 2
-    - _CullMode: 2
-    - _CullModeForward: 2
+    - _CullMode: 0
+    - _CullModeForward: 0
     - _Cutoff: 0.5
     - _DepthOffsetEnable: 0
     - _DetailAlbedoScale: 1
@@ -208,7 +208,7 @@ Material:
     - _DistortionSrcBlend: 1
     - _DistortionVectorBias: -1
     - _DistortionVectorScale: 2
-    - _DoubleSidedEnable: 0
+    - _DoubleSidedEnable: 1
     - _DoubleSidedNormalMode: 1
     - _DstBlend: 0
     - _EmissiveColorMode: 1
@@ -217,7 +217,7 @@ Material:
     - _EmissiveIntensityUnit: 0
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
-    - _EnableGeometricSpecularAA: 0
+    - _EnableGeometricSpecularAA: 1
     - _EnergyConservingSpecularColor: 1
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
@@ -241,7 +241,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _NormalMapSpace: 0
-    - _NormalScale: 1
+    - _NormalScale: 0.08
     - _OcclusionStrength: 1
     - _PPDLodThreshold: 5
     - _PPDMaxSamples: 15
