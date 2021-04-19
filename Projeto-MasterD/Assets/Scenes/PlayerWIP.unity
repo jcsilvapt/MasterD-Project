@@ -325,6 +325,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: JohnDoe
       objectReference: {fileID: 0}
+    - target: {fileID: 8310125495179009919, guid: 7dc84fc130c29ab4e8d76b8f765b0214,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8653859886548878789, guid: 7dc84fc130c29ab4e8d76b8f765b0214,
         type: 3}
       propertyPath: m_RootOrder
@@ -380,6 +385,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9192434846903041835, guid: 7dc84fc130c29ab4e8d76b8f765b0214,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2dfdc32381062aa4e822cf32d795496c, type: 2}
     - target: {fileID: 9192434846903041839, guid: 7dc84fc130c29ab4e8d76b8f765b0214,
         type: 3}
       propertyPath: camera
