@@ -46503,6 +46503,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9109817828105434137, guid: ed16a5e05085afb4589ce7751858f4ff,
+        type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: b0b8731544a76874f901a2b277ba5935, type: 2}
     - target: {fileID: -8679921383154817045, guid: ed16a5e05085afb4589ce7751858f4ff,
         type: 3}
       propertyPath: m_RootOrder
@@ -46558,11 +46563,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4699495237319759891, guid: ed16a5e05085afb4589ce7751858f4ff,
+        type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: b0b8731544a76874f901a2b277ba5935, type: 2}
     - target: {fileID: 919132149155446097, guid: ed16a5e05085afb4589ce7751858f4ff,
         type: 3}
       propertyPath: m_Name
       value: MapPastAsylum_LessMaterials
       objectReference: {fileID: 0}
+    - target: {fileID: 1853236975686699816, guid: ed16a5e05085afb4589ce7751858f4ff,
+        type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: b0b8731544a76874f901a2b277ba5935, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed16a5e05085afb4589ce7751858f4ff, type: 3}
 --- !u!1 &1258882655
