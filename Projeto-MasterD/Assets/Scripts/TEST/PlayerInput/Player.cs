@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
     //change animations
     public bool flashLight = false;
     public GameObject lighter; // lanterna para testes
+    public bool pickitup = false;
 
     // Private
     private Vector2 move, look;   // Stores the current value from input
@@ -132,7 +133,7 @@ public class Player : MonoBehaviour
 
             anim.SetFloat("horizontal", deltaInput.x);
             anim.SetFloat("vertical", deltaInput.y);
-
+         
             #endregion
 
         }
@@ -147,17 +148,29 @@ public class Player : MonoBehaviour
         {
             if (flashLight == false)
             {
-                anim.gameObject.GetComponent<Animator>().SetBool("FlashLight", true);
+                anim.SetBool("FlashLight", true);
                 flashLight = true;
                 lighter.SetActive(true);
             }
             else
             {
-                anim.gameObject.GetComponent<Animator>().SetBool("FlashLight", false);
+                anim.SetBool("FlashLight", false);
                 flashLight = false;
                 lighter.SetActive(false);
             }
         }
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            move.x = 10f;
+            move.y = 10f;
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            anim.Play("PickItUp");
+        }
+       
+
         #endregion
     }
 
