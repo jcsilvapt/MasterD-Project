@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour {
     // Singleton
     public static GameManager instance;
 
+    [Header("Save System")]
+    [SerializeField] SO_PlayerData playerProfile;
+
     [Header("Load System")]
 
     [SerializeField] GameObject loadCanvas;
@@ -38,6 +41,8 @@ public class GameManager : MonoBehaviour {
     // Private
     private GameState currentState = GameState.None;
 
+    private SaveSystem saveSystem;
+
 
 
     private void Awake() {
@@ -51,6 +56,7 @@ public class GameManager : MonoBehaviour {
     }
 
     private void InitialSettings() {
+        saveSystem = new SaveSystem();
         loadCanvas.SetActive(false);
         if(audioMixer == null) {
             audioMixer = GetComponent<AudioMixer>();
@@ -126,6 +132,26 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Function that Saves the current Game State
+    /// </summary>
+    /// <param name="data">Scriptable Object Profile</param>
+    public static void SaveGame() {
+        if(instance != null) {
+            instance.Save();
+        }
+    }
+
+    /// <summary>
+    /// Function that Loads the last saved Game
+    /// </summary>
+    /// <param name="data">Scriptable Object Profile</param>
+    /// <returns>true if save exists</returns>
+    public static void LoadGame() {
+        if(instance != null) {
+            instance.Load();
+        }
+    }
 
     #endregion
 
@@ -143,7 +169,6 @@ public class GameManager : MonoBehaviour {
             StartCoroutine(LoadScreen(index));
         } else {
             SceneManager.LoadScene(index);
-
         }
     }
 
@@ -168,6 +193,19 @@ public class GameManager : MonoBehaviour {
     private void CloseGame() {
         //TODO: Possivelmente adicionar o sistema de Guardar Dados ao Fechar o Jogo...
         Application.Quit();
+    }
+
+    private void Save() {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        playerProfile.currentPosition = player.transform.position;
+        playerProfile.currentScene = SceneManager.GetActiveScene().buildIndex;
+        saveSystem.Save(playerProfile);
+    }
+
+    private void Load() {
+        playerProfile = saveSystem.Load();
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player.transform.position = playerProfile.currentPosition;
     }
 
     #endregion
@@ -234,4 +272,14 @@ public class GameManager : MonoBehaviour {
     }
 
     #endregion
+
+    public void OnSave() {
+        Debug.Log("I Save?");
+        SaveGame();
+    }
+
+    public void OnLoad() {
+        Debug.Log("Loading");
+        LoadGame();
+    }
 }

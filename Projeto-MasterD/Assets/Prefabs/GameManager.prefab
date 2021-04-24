@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 2800880455166787505}
   - component: {fileID: 2800880455166787504}
   m_Layer: 0
-  m_Name: LoadScreen
+  m_Name: Load Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -569,6 +569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5b00f5ba23697f4eb11642c57fbee65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerProfile: {fileID: 0}
   loadCanvas: {fileID: 2800880455166787506}
   loadSlider: {fileID: 2800880455380400322}
   audioMixer: {fileID: 24100000, guid: 4083f7562e2ff90428ff49ecc74e4bd3, type: 2}
