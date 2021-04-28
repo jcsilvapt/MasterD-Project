@@ -161,8 +161,11 @@ public class Player : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            move.x = 10f;
-            move.y = 10f;
+            anim.speed = 1.2f;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            anim.speed = 1f;
         }
 
         if (Input.GetKeyDown(KeyCode.E))
