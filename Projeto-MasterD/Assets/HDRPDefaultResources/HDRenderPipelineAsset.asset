@@ -221,7 +221,7 @@ MonoBehaviour:
     supportTerrainHole: 0
     supportRayTracing: 0
     lightLoopSettings:
-      cookieAtlasSize: 2048
+      cookieAtlasSize: 4096
       cookieFormat: 74
       pointCookieSize: 128
       cubeCookieTexArraySize: 16
@@ -274,7 +274,7 @@ MonoBehaviour:
       maxScreenSpaceShadowSlots: 4
       screenSpaceShadowBufferFormat: 48
     decalSettings:
-      drawDistance: 1000
+      drawDistance: 50
       atlasWidth: 4096
       atlasHeight: 4096
       perChannelMask: 0
