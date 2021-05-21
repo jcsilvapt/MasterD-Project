@@ -43634,39 +43634,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 757230133, guid: 7dc84fc130c29ab4e8d76b8f765b0214, type: 3}
-      propertyPath: m_Range
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 757230133, guid: 7dc84fc130c29ab4e8d76b8f765b0214, type: 3}
-      propertyPath: m_Intensity
-      value: 7.957747
-      objectReference: {fileID: 0}
-    - target: {fileID: 757230133, guid: 7dc84fc130c29ab4e8d76b8f765b0214, type: 3}
-      propertyPath: m_SpotAngle
-      value: 34
-      objectReference: {fileID: 0}
-    - target: {fileID: 757230133, guid: 7dc84fc130c29ab4e8d76b8f765b0214, type: 3}
-      propertyPath: m_InnerSpotAngle
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 757230134, guid: 7dc84fc130c29ab4e8d76b8f765b0214, type: 3}
-      propertyPath: m_Intensity
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 757230134, guid: 7dc84fc130c29ab4e8d76b8f765b0214, type: 3}
-      propertyPath: m_InnerSpotPercent
-      value: 22.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 757230134, guid: 7dc84fc130c29ab4e8d76b8f765b0214, type: 3}
-      propertyPath: m_CustomSpotLightShadowCone
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 3796332825926751051, guid: 7dc84fc130c29ab4e8d76b8f765b0214,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.63
-      objectReference: {fileID: 0}
     - target: {fileID: 8310125495179009919, guid: 7dc84fc130c29ab4e8d76b8f765b0214,
         type: 3}
       propertyPath: m_Name
@@ -43726,11 +43693,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9192434846903041833, guid: 7dc84fc130c29ab4e8d76b8f765b0214,
-        type: 3}
-      propertyPath: m_Mass
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9192434846903041839, guid: 7dc84fc130c29ab4e8d76b8f765b0214,
         type: 3}

@@ -281,7 +281,7 @@
                 {
                     "name": "",
                     "id": "bf7fd84e-c3d8-4c33-b5b5-563d3b9cb411",
-                    "path": "<Mouse>/rightButton",
+                    "path": "<Keyboard>/alt",
                     "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": "",
